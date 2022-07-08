@@ -6,7 +6,6 @@ import com.example.newsapp.services.NewsService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -15,6 +14,13 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
+/**
+ * Provides Network instances of injected objects
+ * [HttpLoggingInterceptor] & [OkHttpClient] &
+ * [GsonConverterFactory] & [RxJava2CallAdapterFactory] &
+ * [Retrofit] & [NewsService]
+ * Created by Abanoub on 7/7/2022
+ */
 @Module
 @InstallIn(SingletonComponent::class)
 object NetworkModule {

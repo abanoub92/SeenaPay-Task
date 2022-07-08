@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@color/white"
+    tools:context=".ui.DetailFragment">
+
+    <ImageView
+        android:id="@+id/detailImage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintHeight_percent="0.4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:src="@mipmap/ic_launcher"
+        tools:ignore="ContentDescription" />
+
+    <!-- Article Title -->
+    <LinearLayout
+        android:id="@+id/detailTitleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/detailImage"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/detailTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/detail_title"
+            android:textSize="14sp"
+            android:textColor="@color/grey"
+            android:textAllCaps="true" />
+
+        <TextView
+            android:id="@+id/detailTitleValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            tools:text="title"/>
+
+    </LinearLayout>
+
+    <!-- Article Publisher -->
+    <LinearLayout
+        android:id="@+id/detailOwnerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toStartOf="@id/detailTitleLayout"
+        app:layout_constraintTop_toBottomOf="@id/detailTitleLayout"
+        app:layout_constraintEnd_toEndOf="@id/detailTitleLayout">
+
+        <TextView
+            android:id="@+id/detailOwner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/detail_owner"
+            android:textSize="14sp"
+            android:textColor="@color/grey"
+            android:textAllCaps="true" />
+
+        <TextView
+            android:id="@+id/detailOwnerValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="18sp"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+    <!-- Article Summary -->
+    <LinearLayout
+        android:id="@+id/detailDescLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toStartOf="@id/detailOwnerLayout"
+        app:layout_constraintTop_toBottomOf="@id/detailOwnerLayout"
+        app:layout_constraintEnd_toEndOf="@id/detailOwnerLayout">
+
+        <TextView
+            android:id="@+id/detailDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/detail_desc"
+            android:textSize="14sp"
+            android:textColor="@color/grey"
+            android:textAllCaps="true" />
+
+        <TextView
+            android:id="@+id/detailDescValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+    <!-- Article Published date -->
+    <LinearLayout
+        android:id="@+id/detailDateLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toStartOf="@id/detailDescLayout"
+        app:layout_constraintTop_toBottomOf="@id/detailDescLayout"
+        app:layout_constraintEnd_toEndOf="@id/detailDescLayout">
+
+        <TextView
+            android:id="@+id/detailDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/detail_date"
+            android:textSize="14sp"
+            android:textColor="@color/grey"
+            android:textAllCaps="true" />
+
+        <TextView
+            android:id="@+id/detailDateValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+    <!-- Article Type -->
+    <LinearLayout
+        android:id="@+id/detailSectionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toStartOf="@id/detailDateLayout"
+        app:layout_constraintTop_toBottomOf="@id/detailDateLayout"
+        app:layout_constraintEnd_toEndOf="@id/detailDateLayout">
+
+        <TextView
+            android:id="@+id/detailSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/detail_type"
+            android:textSize="14sp"
+            android:textColor="@color/grey"
+            android:textAllCaps="true" />
+
+        <TextView
+            android:id="@+id/detailSectionValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/detailBackBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        android:background="@drawable/btn_bg_style"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

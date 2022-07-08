@@ -3,4 +3,10 @@
 
     <string name="domain_name">https://api.nytimes.com/</string>
     <string name="api_key">DW6SRk1F5OK2wxXG3WqNFApuAspoVRf5</string>
+    <string name="detail_title">Title</string>
+    <string name="detail_owner">Published by</string>
+    <string name="detail_desc">Summary</string>
+    <string name="detail_date">Published date</string>
+    <string name="detail_type">Section</string>
+
 </resources>
